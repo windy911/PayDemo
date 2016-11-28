@@ -152,49 +152,6 @@ public class UserCenterActivity extends BaseActivity {
         );
     }
 
-//    private void requestLoginGet() {
-//
-//        String userName = edtUserName.getText().toString().trim();
-//        String password = edtPassword.getText().toString().trim();
-//        String deviceId = getDeivceId();
-//
-//        String httpUrl = Constant.API_LOGIN+"?pwd="+password+"&name="+userName;
-////        HashMap<String, String> map = new HashMap<String, String>();
-////        map.put("name", userName);
-////        map.put("pwd", password);
-////        map.put("deviceId", deviceId);
-//
-//
-////        NameValuePair data = new BasicNameValuePair("name",userName);
-////        NameValuePair data1 = new BasicNameValuePair("pwd",password);
-////        NameValuePair data2 = new BasicNameValuePair("deviceId",deviceId);
-////        final List<NameValuePair> list = new ArrayList<NameValuePair>();
-////        list.add(data);
-////        list.add(data1);
-////        list.add(data2);
-////        new Thread(new Runnable() {
-////            @Override
-////            public void run() {
-////                doPost(0,list);
-////            }
-////        }).start();
-//
-//
-//        httpService.getStringRequest(Request.Method.POST, httpUrl,  new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String s) {
-//                        Log.d("httpService", "onResponse: " + s);
-////                        requestUserInfo();
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError volleyError) {
-//                        Log.d("", "");
-//                    }
-//                }
-//        );
-//    }
 
     private void requestUserInfo() {
 

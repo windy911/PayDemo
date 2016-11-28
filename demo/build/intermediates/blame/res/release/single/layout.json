@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/activity_header.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/activity_header.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/cash_desk_activity.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/cash_desk_activity.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/modify_password.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/modify_password.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/device_list.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/device_list.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/side_menu.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/side_menu.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/message.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/message.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/device_name.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/device_name.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/user_center_activity.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/user_center_activity.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/pay_result_activity.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/pay_result_activity.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/main.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/res/merged/release/layout/login_activity.xml",
+        "source": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/layout/login_activity.xml"
+    }
+]

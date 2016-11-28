@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/windy/Desktop/GitHub/PayDemo/demo/libs/commons-net-3.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5e984db9554728564d58e90da5d90eff8ae8cf2d">
+        <dex dex="/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/pre-dexed/release/commons-net-3.4_067c3dc24dfe3b0536a1466d74cf56320a690479.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/windy/Desktop/GitHub/PayDemo/demo/libs/jxl.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="bf4e1909a16ef91fa983a9df7bf5d8647e328c81">
+        <dex dex="/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/pre-dexed/release/jxl_205965327c987e850bb7c1f8e491dacebb5a4b67.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/windy/Desktop/GitHub/PayDemo/demo/libs/volley.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="4a94601db9bdfb7dc60efabb3dea91a0675f591d">
+        <dex dex="/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/pre-dexed/release/volley_285f816ffd588575664cf3e35f5a2eb583f01d42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/windy/Desktop/GitHub/PayDemo/demo/libs/android-support-v4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="91a1b1aabf740a6f64c2f73f5b0dc6611779ac8b">
+        <dex dex="/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/pre-dexed/release/android-support-v4_1e002e51de90de8e562e11336855deb50e6fc983.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/windy/Desktop/GitHub/PayDemo/demo/libs/devicelib.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7b877cb0f02805c102106074e9fd10eebfa66759">
+        <dex dex="/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/pre-dexed/release/devicelib_85c12d24d60ccc1d328e2b02308165f794edcc6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/windy/Desktop/GitHub/PayDemo/demo/libs/xUtils-2.6.14.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
+        <dex dex="/Users/windy/Desktop/GitHub/PayDemo/demo/build/intermediates/pre-dexed/release/xUtils-2.6.14_acb9808b4c131bffe5e80477314e99d263a5fb4c.jar" />
+    </item>
+
+</items>

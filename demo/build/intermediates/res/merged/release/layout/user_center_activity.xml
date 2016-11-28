@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <include layout="@layout/activity_header" />
+
+    <LinearLayout
+        android:id="@+id/llLogined"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textSize="22dp"
+            android:text="账户名称">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvAccountStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textSize="22dp"
+            android:text="账户状态">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvAccountBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textSize="22dp"
+            android:text="账户余额">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:gravity="center"
+            android:textSize="22dp"
+            android:text="登出">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llunLogin"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:hint="请输入用户名"
+            android:maxLength="16"
+            android:singleLine="true">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/edtUserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:hint="请输入密码"
+            android:maxLength="16"
+            android:inputType="textPassword"
+            android:singleLine="true">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:text="登录"
+            android:textSize="28dp"></Button>
+
+    </LinearLayout>
+
+</LinearLayout>
