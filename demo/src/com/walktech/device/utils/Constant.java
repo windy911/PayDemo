@@ -5,7 +5,8 @@ package com.walktech.device.utils;
  */
 
 public class Constant {
-    public static final String API_DOMAIN = "http://210.22.128.2:8016/";
+//    public static final String API_DOMAIN = "http://210.22.128.2:8016/";
+    public static final String API_DOMAIN = "http://smart.yunyesoft.com/kltong/";
     public static final String API_LOGIN = API_DOMAIN + "app/v1/user/login";
     public static final String API_USERINFO = API_DOMAIN + "app/v1/user/info";
     public static final String API_PAY = API_DOMAIN + "app/v1/pay/virtualnonepin";

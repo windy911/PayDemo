@@ -1,10 +1,14 @@
 package com.walktech.device;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.provider.Settings;
 import android.support.v4.widget.DrawerLayout;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -112,6 +116,42 @@ public class CashDeskActivity extends BaseActivity {
     @ViewInject(R.id.tvShopName)
     private TextView tvShopName;
 
+
+    @ViewInject(R.id.llKeyborad)
+    private LinearLayout llKeyborad;
+
+    @ViewInject(R.id.key1)
+    private TextView key1;
+    @ViewInject(R.id.key2)
+    private TextView key2;
+    @ViewInject(R.id.key3)
+    private TextView key3;
+
+    @ViewInject(R.id.key4)
+    private TextView key4;
+    @ViewInject(R.id.key5)
+    private TextView key5;
+    @ViewInject(R.id.key6)
+    private TextView key6;
+
+    @ViewInject(R.id.key7)
+    private TextView key7;
+    @ViewInject(R.id.key8)
+    private TextView key8;
+    @ViewInject(R.id.key9)
+    private TextView key9;
+
+    @ViewInject(R.id.keyDot)
+    private TextView keyDot;
+    @ViewInject(R.id.key0)
+    private TextView key0;
+    @ViewInject(R.id.keyBack)
+    private TextView keyBack;
+
+    boolean isPaying = false;
+    private Dialog dialog;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -160,8 +200,25 @@ public class CashDeskActivity extends BaseActivity {
             }
         });
 
+        edtAmount.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        getWindow().setSoftInputMode( WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                setPrice();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
     }
 
     private void initView() {
@@ -218,7 +275,7 @@ public class CashDeskActivity extends BaseActivity {
         String httpUrl = Constant.API_REGISTER;
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("name", strName);
-        map.put("merName",strShopName);
+        map.put("merName", strShopName);
         map.put("pwd", strPwd);
 
 
@@ -352,6 +409,7 @@ public class CashDeskActivity extends BaseActivity {
 
                         } catch (Exception e) {
                             setLogin(false);
+                            showNetworkError();
                         }
 
                     }
@@ -360,9 +418,14 @@ public class CashDeskActivity extends BaseActivity {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         Log.d("", "");
+                        showNetworkError();
                     }
                 }
         );
+    }
+
+    private void showNetworkError() {
+        Toast.makeText(CashDeskActivity.this, "请检查网络连接", Toast.LENGTH_SHORT).show();
     }
 
     private void requestUserInfo() {
@@ -392,7 +455,7 @@ public class CashDeskActivity extends BaseActivity {
                             setLogin(true);
                         } catch (Exception e) {
                             setLogin(false);
-
+                            showNetworkError();
                         }
                     }
                 },
@@ -400,7 +463,9 @@ public class CashDeskActivity extends BaseActivity {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
 //                        Log.d("", volleyError.getMessage());
-                        Toast.makeText(CashDeskActivity.this, "获取信息失败", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(CashDeskActivity.this, "获取信息失败", Toast.LENGTH_SHORT).show();
+                        showNetworkError();
+                        toLoginView();
                     }
                 },
                 token
@@ -426,13 +491,26 @@ public class CashDeskActivity extends BaseActivity {
         return android_id;
     }
 
+    public void readCard() {
+        if (MainActivity.mInstance != null && MainActivity.isConnected()) {
+            clear();
+            MainActivity.mInstance.readNFC();
+        } else {
+            Toast.makeText(CashDeskActivity.this, "请先连接设备", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     public void saveUserName() {
         SPHelp.getInstance(CashDeskActivity.this).setStirngValue(SPHelp.USER_NAME, edtUserName.getText().toString().trim());
     }
 
     @OnClick({R.id.btnSetting, R.id.btnMenu, R.id.btnComfirm, R.id.btnNFCStatus, R.id.btnLogin,
             R.id.btnLogout, R.id.rlSideMenuBg, R.id.tvNewregister,
-            R.id.tvToLogin, R.id.tvModifyPWD, R.id.btnRegister})
+            R.id.tvToLogin, R.id.tvModifyPWD, R.id.btnRegister,
+            R.id.key1, R.id.key2, R.id.key3,
+            R.id.key4, R.id.key5, R.id.key6,
+            R.id.key7, R.id.key8, R.id.key9,
+            R.id.key0, R.id.keyDot, R.id.keyBack,})
     public void onClicked(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -441,6 +519,7 @@ public class CashDeskActivity extends BaseActivity {
                     refresh();
                     MainActivity.mInstance.cancelSwiper();
                 }
+
                 intent = new Intent(CashDeskActivity.this, MainActivity.class);
                 startActivity(intent);
                 break;
@@ -448,13 +527,10 @@ public class CashDeskActivity extends BaseActivity {
                 onMenuClicked();
                 break;
             case R.id.btnComfirm:
-                requestPay();
+                readCard();
                 break;
             case R.id.btnNFCStatus:
-                if (MainActivity.mInstance != null) {
-                    clear();
-                    MainActivity.mInstance.readNFC();
-                }
+//                readCard();
                 break;
             case R.id.btnLogout:
                 setLogin(false);
@@ -480,9 +556,97 @@ public class CashDeskActivity extends BaseActivity {
             case R.id.btnRegister:
                 register();
                 break;
+
+            case R.id.key1:
+            case R.id.key2:
+            case R.id.key3:
+            case R.id.key4:
+            case R.id.key5:
+            case R.id.key6:
+            case R.id.key7:
+            case R.id.key8:
+            case R.id.key9:
+            case R.id.key0:
+            case R.id.keyDot:
+            case R.id.keyBack:
+                doKeyPress(view.getId());
+                break;
         }
     }
 
+    private void inputNumber(int key) {
+        String value = edtAmount.getText().toString().trim();
+        if (value.equals("0")) {
+            edtAmount.setText("" + key);
+        } else if (value.contains(".") && (value.length() >= value.indexOf(".") + 3)) {
+            return;
+        } else {
+            edtAmount.setText(value + key);
+        }
+
+
+    }
+
+    private void doKeyPress(int vid) {
+        Log.d("RAMBO", "doKeyPress = " + vid);
+        String value = edtAmount.getText().toString().trim();
+
+        switch (vid) {
+            case R.id.key1:
+                inputNumber(1);
+                break;
+            case R.id.key2:
+                inputNumber(2);
+                break;
+            case R.id.key3:
+                inputNumber(3);
+                break;
+            case R.id.key4:
+                inputNumber(4);
+                break;
+            case R.id.key5:
+                inputNumber(5);
+                break;
+            case R.id.key6:
+                inputNumber(6);
+                break;
+            case R.id.key7:
+                inputNumber(7);
+                break;
+            case R.id.key8:
+                inputNumber(8);
+                break;
+            case R.id.key9:
+                inputNumber(9);
+                break;
+            case R.id.key0:
+                if (value.equals("0")) {
+                    return;
+                } else if (value.length() == 0) {
+                    edtAmount.setText("0");
+                } else if (value.contains(".") && (value.length() >= value.indexOf(".") + 3)) {
+                    return;
+                } else {
+                    edtAmount.setText(value + "0");
+                }
+                break;
+            case R.id.keyDot:
+                if (value.contains(".")) {
+                    return;
+                }
+                if (value.length() == 0) {
+                    edtAmount.setText("0.");
+                } else {
+                    edtAmount.setText(value + ".");
+                }
+                break;
+            case R.id.keyBack:
+                if (value.length() > 0) {
+                    edtAmount.setText(value.substring(0, edtAmount.length() - 1));
+                }
+                break;
+        }
+    }
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -551,10 +715,30 @@ public class CashDeskActivity extends BaseActivity {
                     break;
                 case HANDLER_MSG_CID:
                     setStatus(STATUS_RED);
+                    payAuto();
                     break;
             }
         }
     };
+
+    //当获得到 读卡完成消息 后，自动点击 确定支付 按钮
+    public void payAuto() {
+
+        String token = SPHelp.getInstance(CashDeskActivity.this).getStringValue(SPHelp.USER_TOKEN);
+
+        if (token == null || token.length() <= 0) {
+//            Toast.makeText(CashDeskActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (edtAmount.getText().toString().trim().length() == 0) {
+//            Toast.makeText(CashDeskActivity.this, "请输入金额", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+//        btnComfirm.performClick();
+        requestPay();
+    }
 
     public void setUUID(String uuid) {
         strUUID = uuid;
@@ -604,17 +788,27 @@ public class CashDeskActivity extends BaseActivity {
     public void setStatus(int status) {
         switch (status) {
             case STATUS_GREY:
-                btnNFCStatus.setBackgroundColor(getResources().getColor(R.color.grey));
-                btnNFCStatus.setText("未读卡");
+                btnNFCStatus.setBackgroundColor(getResources().getColor(R.color.red));
+//                btnNFCStatus.setText("未读卡");
                 break;
             case STATUS_YELLOW:
-                btnNFCStatus.setBackgroundColor(getResources().getColor(R.color.grey));
-                btnNFCStatus.setText("请刷卡");
+                btnNFCStatus.setBackgroundColor(getResources().getColor(R.color.red));
+//                btnNFCStatus.setText("请刷卡");
                 break;
             case STATUS_RED:
                 btnNFCStatus.setBackgroundColor(getResources().getColor(R.color.red));
-                btnNFCStatus.setText("读卡完成");
+//                btnNFCStatus.setText("读卡完成");
                 break;
+        }
+    }
+
+    //显示大价格
+    public void setPrice() {
+        String price = edtAmount.getText().toString().trim();
+        if (price.length() == 0) {
+            btnNFCStatus.setText("¥0.00");
+        } else {
+            btnNFCStatus.setText("¥" + price);
         }
     }
 
@@ -646,7 +840,7 @@ public class CashDeskActivity extends BaseActivity {
                             }
 
                             if ("0".equals(code)) {
-                                Log.d("","获取商户名称成功"+merName);
+                                Log.d("", "获取商户名称成功" + merName);
                             } else {
                                 Toast.makeText(CashDeskActivity.this, msg, Toast.LENGTH_SHORT).show();
                             }
@@ -659,15 +853,35 @@ public class CashDeskActivity extends BaseActivity {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         Log.d("", "");
+                        showNetworkError();
                     }
                 }
         );
     }
 
+    private void showLoading(final boolean isShow) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (isShow) {
+                    dialog = new AlertDialog.Builder(CashDeskActivity.this).setMessage("加载中...").show();
+                    dialog.setCancelable(false);
+                } else {
+                    if (dialog != null) {
+                        dialog.dismiss();
+                    }
+                }
+
+            }
+        });
+    }
+
     private void requestPay() {
+        if (isPaying) return;
+
         String token = SPHelp.getInstance(CashDeskActivity.this).getStringValue(SPHelp.USER_TOKEN);
 
-        if(token==null || token.length()<=0){
+        if (token == null || token.length() <= 0) {
             Toast.makeText(CashDeskActivity.this, "请先登录", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -688,8 +902,6 @@ public class CashDeskActivity extends BaseActivity {
         }
 
 
-
-
         String amount = edtAmount.getText().toString().trim();
 
         HashMap<String, String> map = new HashMap<String, String>();
@@ -699,12 +911,14 @@ public class CashDeskActivity extends BaseActivity {
 
         String httpUrl = Constant.API_PAY;
 
-
+        isPaying = true;
+        showLoading(true);
         httpService.postStringRequestWithToken(Request.Method.POST, httpUrl, map, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String s) {
                         Log.d("httpService", "onResponse: " + s);
-
+                        isPaying = false;
+                        showLoading(false);
                         try {
                             JSONObject json = new JSONObject(s);
                             String code = json.getString("code");
@@ -734,6 +948,7 @@ public class CashDeskActivity extends BaseActivity {
 
                         } catch (Exception e) {
                             Toast.makeText(CashDeskActivity.this, "扣款失败", Toast.LENGTH_SHORT).show();
+
                         }
 
                     }
@@ -741,7 +956,9 @@ public class CashDeskActivity extends BaseActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.d("", "");
+                        isPaying = false;
+                        showLoading(false);
+                        showNetworkError();
                     }
                 },
                 token

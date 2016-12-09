@@ -290,11 +290,11 @@ public class MainActivity extends BaseActivity {
     }
 
     public void readNFC(){
-
         cancelSwiper();
-
         if(mButtonNFC!=null){
             mButtonNFC.performClick();
+        }else{
+            Toast.makeText(MainActivity.this, "无法读取卡片", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -332,6 +332,7 @@ public class MainActivity extends BaseActivity {
                 public void run() {
                     Toast.makeText(MainActivity.this,"连接成功",Toast.LENGTH_SHORT).show();
                     tvStatusBT.setText("连接成功");
+                    isbMposConnected = true;
                 }
             });
             mHandler.obtainMessage(ENABLE_BUTTON, ENABLE_CONNECT_BUTTON, 0, 0).sendToTarget();
@@ -349,8 +350,9 @@ public class MainActivity extends BaseActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    Toast.makeText(MainActivity.this,"未连接",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"连接失败，请重试或重启读卡设备",Toast.LENGTH_SHORT).show();
                     tvStatusBT.setText("未连接");
+                    isbMposConnected = false;
                 }
             });
             mHandler.obtainMessage(ENABLE_BUTTON, ENABLE_CONNECT_BUTTON, 0, 0).sendToTarget();
@@ -826,8 +828,6 @@ public class MainActivity extends BaseActivity {
         mHandler.obtainMessage(MESSAGE_HOST, 0, 0,
                 "Connect BT Device: name=" + name + " MAC=" + address).sendToTarget();
 
-//        Toast.makeText(MainActivity.this,"连接成功",Toast.LENGTH_SHORT).show();
-//        tvStatusBT.setText("连接成功");
     }
 
     private void disconnectBT() {
@@ -841,6 +841,11 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    private static boolean isbMposConnected = false;
+    public static boolean isConnected(){
+        return isbMposConnected;
+    }
+
     private void getDeviceStatus() {
 
         boolean status = mmposService.isDevicePresent();
@@ -850,13 +855,17 @@ public class MainActivity extends BaseActivity {
                     "Device connected").sendToTarget();
 //            Toast.makeText(MainActivity.this,"连接成功",Toast.LENGTH_SHORT).show();
             tvStatusBT.setText("连接成功");
+            isbMposConnected = true;
         } else {
             mHandler.obtainMessage(MESSAGE_HOST, 0, 0,
                     "Device did not connectd, press Scan MPOS to connect device").sendToTarget();
 //            Toast.makeText(MainActivity.this,"未连接",Toast.LENGTH_SHORT).show();
             tvStatusBT.setText("未连接");
+            isbMposConnected = false;
         }
     }
+
+
 
     public String bytes2HexString(byte[] b, int length) {
         String ret = "";

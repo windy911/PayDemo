@@ -29,7 +29,7 @@
     <drawable name="tweet_meta_color">#FF999999</drawable>
     <drawable name="tweet_user_color">#FF52991F</drawable>
     <string name="Connect">Connect to MPOS</string>
-    <string name="app_name">DEMO</string>
+    <string name="app_name">收银台</string>
     <string name="batch">Batch Mode</string>
     <string name="bt_not_enabled_leaving">蓝牙未开启，请在设置中开启蓝牙</string>
     <string name="button_scan">搜索设备</string>
@@ -56,5 +56,15 @@
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="keyboard">
+
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+
     </style>
 </resources>

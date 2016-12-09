@@ -7,6 +7,4 @@ public class Feed {
     public String resCode;
     public String resMsg;
     public String resData;
-
-
 }

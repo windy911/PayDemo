@@ -1,9 +1,1 @@
-AutoyolSd/bin/*
-AutoyolSd/gen/*
-AutoyolSd/build/*
-AutoyolSd/.navigation/*
-AutoyolSd/.gradle/*
-AutoyolSd/.idea/*
-AutoyolSd/AutoyolSd.iml
-AutoyolSd/out/*
-AutoyolSd/local.properties
+demo/.gradle/*

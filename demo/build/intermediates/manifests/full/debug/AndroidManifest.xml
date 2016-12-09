@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.walktech.device"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0.0" >
 
     <uses-sdk
         android:minSdkVersion="17"
@@ -46,11 +46,6 @@
             android:name="com.walktech.device.PayResultActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="支付结果"
-            android:theme="@android:style/Theme.NoTitleBar" />
-        <activity
-            android:name="com.walktech.device.UserCenterActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="用户中心"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity
             android:name="com.walktech.device.ModifyPasswordActivity"

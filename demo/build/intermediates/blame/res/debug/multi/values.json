@@ -547,9 +547,9 @@
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 942,
+                        "startOffset": 941,
                         "endColumn": 51,
-                        "endOffset": 989
+                        "endOffset": 988
                     }
                 }
             },
@@ -558,8 +558,8 @@
                     "startLine": 31,
                     "startColumn": 4,
                     "startOffset": 1479,
-                    "endColumn": 41,
-                    "endOffset": 1516
+                    "endColumn": 40,
+                    "endOffset": 1515
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
@@ -567,8 +567,8 @@
                         "startLine": 3,
                         "startColumn": 4,
                         "startOffset": 108,
-                        "endColumn": 41,
-                        "endOffset": 145
+                        "endColumn": 40,
+                        "endOffset": 144
                     }
                 }
             },
@@ -576,18 +576,18 @@
                 "to": {
                     "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 1521,
+                    "startOffset": 1520,
                     "endColumn": 44,
-                    "endOffset": 1561
+                    "endOffset": 1560
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
-                        "startOffset": 1064,
+                        "startOffset": 1063,
                         "endColumn": 44,
-                        "endOffset": 1104
+                        "endOffset": 1103
                     }
                 }
             },
@@ -595,18 +595,18 @@
                 "to": {
                     "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 1566,
+                    "startOffset": 1565,
                     "endColumn": 66,
-                    "endOffset": 1628
+                    "endOffset": 1627
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 226,
+                        "startOffset": 225,
                         "endColumn": 66,
-                        "endOffset": 288
+                        "endOffset": 287
                     }
                 }
             },
@@ -614,18 +614,18 @@
                 "to": {
                     "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 1633,
+                    "startOffset": 1632,
                     "endColumn": 44,
-                    "endOffset": 1673
+                    "endOffset": 1672
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 870,
+                        "startOffset": 869,
                         "endColumn": 44,
-                        "endOffset": 910
+                        "endOffset": 909
                     }
                 }
             },
@@ -633,18 +633,18 @@
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 1678,
+                    "startOffset": 1677,
                     "endColumn": 33,
-                    "endOffset": 1707
+                    "endOffset": 1706
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
-                        "startOffset": 1030,
+                        "startOffset": 1029,
                         "endColumn": 33,
-                        "endOffset": 1059
+                        "endOffset": 1058
                     }
                 }
             },
@@ -652,18 +652,18 @@
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 1712,
+                    "startOffset": 1711,
                     "endColumn": 45,
-                    "endOffset": 1753
+                    "endOffset": 1752
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 715,
+                        "startOffset": 714,
                         "endColumn": 45,
-                        "endOffset": 756
+                        "endOffset": 755
                     }
                 }
             },
@@ -671,18 +671,18 @@
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 1758,
+                    "startOffset": 1757,
                     "endColumn": 47,
-                    "endOffset": 1801
+                    "endOffset": 1800
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 667,
+                        "startOffset": 666,
                         "endColumn": 47,
-                        "endOffset": 710
+                        "endOffset": 709
                     }
                 }
             },
@@ -690,18 +690,18 @@
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 1806,
+                    "startOffset": 1805,
                     "endColumn": 47,
-                    "endOffset": 1849
+                    "endOffset": 1848
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 178,
+                        "startOffset": 177,
                         "endColumn": 47,
-                        "endOffset": 221
+                        "endOffset": 220
                     }
                 }
             },
@@ -709,18 +709,18 @@
                 "to": {
                     "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 1854,
+                    "startOffset": 1853,
                     "endColumn": 46,
-                    "endOffset": 1896
+                    "endOffset": 1895
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
-                        "startOffset": 1109,
+                        "startOffset": 1108,
                         "endColumn": 46,
-                        "endOffset": 1151
+                        "endOffset": 1150
                     }
                 }
             },
@@ -728,18 +728,18 @@
                 "to": {
                     "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 1901,
+                    "startOffset": 1900,
                     "endColumn": 43,
-                    "endOffset": 1940
+                    "endOffset": 1939
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 574,
+                        "startOffset": 573,
                         "endColumn": 43,
-                        "endOffset": 613
+                        "endOffset": 612
                     }
                 }
             },
@@ -747,18 +747,18 @@
                 "to": {
                     "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 1945,
+                    "startOffset": 1944,
                     "endColumn": 48,
-                    "endOffset": 1989
+                    "endOffset": 1988
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 618,
+                        "startOffset": 617,
                         "endColumn": 48,
-                        "endOffset": 662
+                        "endOffset": 661
                     }
                 }
             },
@@ -766,18 +766,18 @@
                 "to": {
                     "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 1994,
+                    "startOffset": 1993,
                     "endColumn": 87,
-                    "endOffset": 2077
+                    "endOffset": 2076
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 345,
+                        "startOffset": 344,
                         "endColumn": 91,
-                        "endOffset": 432
+                        "endOffset": 431
                     }
                 }
             },
@@ -785,18 +785,18 @@
                 "to": {
                     "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 2082,
+                    "startOffset": 2081,
                     "endColumn": 51,
-                    "endOffset": 2129
+                    "endOffset": 2128
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 293,
+                        "startOffset": 292,
                         "endColumn": 51,
-                        "endOffset": 340
+                        "endOffset": 339
                     }
                 }
             },
@@ -804,18 +804,18 @@
                 "to": {
                     "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 2134,
+                    "startOffset": 2133,
                     "endColumn": 50,
-                    "endOffset": 2180
+                    "endOffset": 2179
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 489,
+                        "startOffset": 488,
                         "endColumn": 50,
-                        "endOffset": 535
+                        "endOffset": 534
                     }
                 }
             },
@@ -823,18 +823,18 @@
                 "to": {
                     "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 2185,
+                    "startOffset": 2184,
                     "endColumn": 51,
-                    "endOffset": 2232
+                    "endOffset": 2231
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 437,
+                        "startOffset": 436,
                         "endColumn": 51,
-                        "endOffset": 484
+                        "endOffset": 483
                     }
                 }
             },
@@ -842,18 +842,18 @@
                 "to": {
                     "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 2237,
+                    "startOffset": 2236,
                     "endColumn": 54,
-                    "endOffset": 2287
+                    "endOffset": 2286
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 815,
+                        "startOffset": 814,
                         "endColumn": 54,
-                        "endOffset": 865
+                        "endOffset": 864
                     }
                 }
             },
@@ -861,18 +861,18 @@
                 "to": {
                     "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 2292,
+                    "startOffset": 2291,
                     "endColumn": 53,
-                    "endOffset": 2341
+                    "endOffset": 2340
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 761,
+                        "startOffset": 760,
                         "endColumn": 53,
-                        "endOffset": 810
+                        "endOffset": 809
                     }
                 }
             },
@@ -880,18 +880,18 @@
                 "to": {
                     "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 2346,
+                    "startOffset": 2345,
                     "endColumn": 35,
-                    "endOffset": 2377
+                    "endOffset": 2376
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
-                        "startOffset": 994,
+                        "startOffset": 993,
                         "endColumn": 35,
-                        "endOffset": 1025
+                        "endOffset": 1024
                     }
                 }
             },
@@ -899,10 +899,10 @@
                 "to": {
                     "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 2382,
+                    "startOffset": 2381,
                     "endLine": 55,
                     "endColumn": 12,
-                    "endOffset": 2682
+                    "endOffset": 2681
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/styles.xml",
@@ -920,10 +920,10 @@
                 "to": {
                     "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 2687,
+                    "startOffset": 2686,
                     "endLine": 58,
                     "endColumn": 12,
-                    "endOffset": 2842
+                    "endOffset": 2841
                 },
                 "from": {
                     "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/styles.xml",
@@ -934,6 +934,27 @@
                         "endLine": 17,
                         "endColumn": 12,
                         "endOffset": 696
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 2846,
+                    "endLine": 68,
+                    "endColumn": 12,
+                    "endOffset": 3219
+                },
+                "from": {
+                    "file": "/Users/windy/Desktop/GitHub/PayDemo/demo/res/values/styles.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 704,
+                        "endLine": 28,
+                        "endColumn": 12,
+                        "endOffset": 1086
                     }
                 }
             }

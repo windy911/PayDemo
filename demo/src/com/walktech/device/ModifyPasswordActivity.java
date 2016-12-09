@@ -56,38 +56,38 @@ public class ModifyPasswordActivity extends BaseActivity {
     }
 
     @OnClick({R.id.btnModify})
-    public void onClick(View view){
-        switch (view.getId()){
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.btnModify:
                 modifyPwd();
                 break;
         }
     }
 
-    public boolean checkValid(){
+    public boolean checkValid() {
         String oldPwd = edtOldPwd.getText().toString().trim();
         String newPwd = edtNewPwd.getText().toString().trim();
         String newPwd2 = edtNewPwd2.getText().toString().trim();
 
-        if(oldPwd.length()<=0){
-            Toast.makeText(ModifyPasswordActivity.this,"请输入原密码",Toast.LENGTH_SHORT).show();
+        if (oldPwd.length() <= 0) {
+            Toast.makeText(ModifyPasswordActivity.this, "请输入原密码", Toast.LENGTH_SHORT).show();
             return false;
-        }else if(newPwd.length()<=0){
-            Toast.makeText(ModifyPasswordActivity.this,"请输入新密码",Toast.LENGTH_SHORT).show();
+        } else if (newPwd.length() <= 0) {
+            Toast.makeText(ModifyPasswordActivity.this, "请输入新密码", Toast.LENGTH_SHORT).show();
             return false;
-        }else if(newPwd2.length()<=0){
-            Toast.makeText(ModifyPasswordActivity.this,"请再次输入新密码",Toast.LENGTH_SHORT).show();
+        } else if (newPwd2.length() <= 0) {
+            Toast.makeText(ModifyPasswordActivity.this, "请再次输入新密码", Toast.LENGTH_SHORT).show();
             return false;
-        }else if(!newPwd.equals(newPwd2)){
-            Toast.makeText(ModifyPasswordActivity.this,"两次输入密码不一致",Toast.LENGTH_SHORT).show();
+        } else if (!newPwd.equals(newPwd2)) {
+            Toast.makeText(ModifyPasswordActivity.this, "两次输入密码不一致", Toast.LENGTH_SHORT).show();
             return false;
         }
 
         return true;
     }
 
-    public void modifyPwd(){
-        if(checkValid()){
+    public void modifyPwd() {
+        if (checkValid()) {
             requestModify();
         }
     }
